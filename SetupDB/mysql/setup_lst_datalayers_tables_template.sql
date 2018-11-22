@@ -1,0 +1,41 @@
+CREATE DATABASE IF NOT EXISTS __DBNAME__;
+
+USE __DBNAME__;
+
+CREATE TABLE IF NOT EXISTS evt1 (
+                                        event_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                                        x DOUBLE,
+                                        y DOUBLE,
+                                        r DOUBLE,
+                                        phi DOUBLE,
+                                        length DOUBLE,
+                                        width DOUBLE,
+                                        psi DOUBLE,
+                                        skewness DOUBLE,
+                                        kurtosis DOUBLE,
+                                        disp DOUBLE,
+                                        hadroness DOUBLE,
+                                        src_x DOUBLE,
+                                        src_y DOUBLE,
+                                        time_gradient DOUBLE,
+                                        intercept DOUBLE,
+                                        gps_time DOUBLE,
+                                        mc_energy DOUBLE,
+                                        mc_alt DOUBLE,
+                                        mc_az DOUBLE,
+                                        mc_core_x DOUBLE,
+                                        mc_core_y DOUBLE,
+                                        mc_h_first_int DOUBLE,
+                                        mc_type DOUBLE,
+                                        mc_az_tel DOUBLE,
+                                        mc_alt_tel DOUBLE,
+                                        mc_x_max DOUBLE,
+                                        mc_core_distance DOUBLE,
+                                        mc_shower_primary_id DOUBLE,
+                                        hadroness DOUBLE,
+                                        wl DOUBLE,
+                                        impact DOUBLE,
+                                        observationid INTEGER UNSIGNED,
+                                        datarepositoryid INTEGER UNSIGNED,
+                                        status INTEGER UNSIGNED
+                                      );
