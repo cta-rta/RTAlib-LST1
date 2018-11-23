@@ -23,7 +23,7 @@ from random import uniform
 from PyRTAlib.DataModels.EVTbase import EVTbase
 
 class EVT1(EVTbase):
-    def __init__(self, event_id, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, hadroness, wl, impact, obs_id, datarepositoryid, status ):
+    def __init__(self, event_id, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, wl, impact, obs_id, datarepositoryid, status ):
         super().__init__();
 
         self.event_id = event_id
@@ -55,18 +55,12 @@ class EVT1(EVTbase):
         self.mc_x_max = mc_x_max
         self.mc_core_distance = mc_core_distance
         self.mc_shower_primary_id = mc_shower_primary_id
-        self.hadroness = hadroness
         self.wl = wl
         self.impact = impact
         self.observationid = obs_id
         self.datarepositoryid = datarepositoryid
         self.status = status
 
-
-    def getData(self):
-        """Return the 'dictionary' representation of the object.
-        """
-        return vars(self)
 
     @staticmethod
     def getRandomEvent():

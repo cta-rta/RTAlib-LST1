@@ -18,7 +18,7 @@
 #
 # ==========================================================================
 
-from PyRTAlib.RTAInteface import RTA_DL_DB
+from PyRTAlib.RTAInterface.RTA_DL_DB import RTA_DL_DB
 from ..DataModels import EVT1
 
 
@@ -37,8 +37,8 @@ class RTA_EVT1_DB(RTA_DL_DB):
                 print('[RTA_EVT1_DB] Cannot connect.')
         """
 
-    def insertEvent(self, eventidfits, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, hadroness, wl, impact, observationid, datarepositoryid, status):
-        evt1 = EVT1(eventidfits, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, hadroness, wl, impact, observationid, datarepositoryid, status)
+    def insertEvent(self, eventidfits, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, wl, impact, observationid, datarepositoryid, status):
+        evt1 = EVT1(eventidfits, x, y, r, phi, length, width, psi, skewness, kurtosis, disp, hadroness, src_x, src_y, time_gradient, intercept, gps_time, mc_energy, mc_alt, mc_az, mc_core_x, mc_core_y, mc_h_first_int, mc_type, mc_az_tel, mc_alt_tel, mc_x_max, mc_core_distance, mc_shower_primary_id, wl, impact, observationid, datarepositoryid, status)
         committed = super()._insertEvent(evt1)
 
 

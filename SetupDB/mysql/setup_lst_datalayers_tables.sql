@@ -1,9 +1,5 @@
-CREATE DATABASE IF NOT EXISTS __DBNAME__;
-
-USE __DBNAME__;
-
 CREATE TABLE IF NOT EXISTS evt1 (
-                                        event_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                                        event_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                                         x DOUBLE,
                                         y DOUBLE,
                                         r DOUBLE,
@@ -32,7 +28,6 @@ CREATE TABLE IF NOT EXISTS evt1 (
                                         mc_x_max DOUBLE,
                                         mc_core_distance DOUBLE,
                                         mc_shower_primary_id DOUBLE,
-                                        hadroness DOUBLE,
                                         wl DOUBLE,
                                         impact DOUBLE,
                                         observationid INTEGER UNSIGNED,
