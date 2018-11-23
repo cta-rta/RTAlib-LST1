@@ -18,7 +18,7 @@
 #
 # ==========================================================================
 
-from PyRTAlib.RTAInteface import RTA_DL_DB
+from PyRTAlib.RTAInterface.RTA_DL_DB import RTA_DL_DB
 from ..DataModels import EVT2
 
 
